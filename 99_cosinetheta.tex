@@ -1,0 +1,181 @@
+\documentclass[11pt]{article}
+\usepackage{url}
+\usepackage{graphicx}	
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{cleveref}
+%\crefname{section}{¤}{¤¤}
+%\Crefname{section}{¤}{¤¤}
+\begin{document}
+
+\begin{center}
+{\Large {\bf    The sum of cosines by space averaging}} % via Birkhoff's ergodic principle }}
+\end{center}
+
+
+Fix a  value of  the integral  of motion  \begin{equation} r = (AX,V) \,.  \label{integral}  \end{equation}
+    The  $r$'s  corresponding to closed orbits  could  be found implementing Cayley's conditions.
+We present  instead a computation that holds for all $r$, so most correspond to quasi-periodic orbits.     Giving a starting point  $P_o$,  consider the {\it asymptotic} average 
+ \begin{equation}     K(c) =  \lim_{k \to \infty}\,\,     (1/k) \,  \sum_{i=1}^k   \cos(\theta_i) .
+ \end{equation}
+ where  $\theta_i$ are the internal angles between the consecutive segments of the trajectory, that in general does not close.
+For those  $r$ yielding irrational invariant tori      it is   intuitive  that $ K(r) $  does not depend on the starting point on the  ellipse boundary.
+ In fact the {\it averaging principle}  (see Arnold \cite{Arnold},
+section 51, or Jovanovic  \cite{Jovanovic} for a short discussion)  gives
+   \begin{equation}    K(r) =   \oint   \cos(\theta) \rho(s) \, ds  .
+   \end{equation} 
+where the integral is performed along the external boundary  and  $\rho$  is the density of an invariant measure  with total measure normalized to 1.
+Roughly,  this measure  gives  the probability of a boundary point being hit as the trajectory is followed forever forwards and backwards in time.
+
+This measure has an explicit expression.   % e recall a more general construction.  %  It  is more interesting  to do the averaging along the caustic (the internal ellipse).  %  Going back to the 1950's and 1970's
+  Given a convex curve $C$,  the  string construction consists of enveloping the curve  tightly with a string
+of length $ L(C) + p $.   This  yields a  surrounding curve $C_p$ that, {\it seen as a billiard boundary}, has $C$ as a caustic.  Poritsky  \cite{Poritsky} and Lazutkin \cite{Lazutkin}  showed that  the billiard map restricted to the segments
+tangent to $C$ has an invariant measure 
+\begin{equation}  \rho  =  dx = \kappa^{2/3} ds, 
+\end{equation} 
+where $\kappa$   is the curvature and  $s$ the arc length of  the caustic $C$.  In other words, $x \to  x + {\rm const.}$ linearizes the billiard map\footnote{See    Glutsyuk  \cite{Glutsyuk}  and \cite{Zhang} for recent work on the subject.}.  Surprisingly   (at least to us)   this measure is ``universal'' in the sense that it does not depend on $p$, just that constant depends on $p$. The case of  elliptic billiards is  developed   in detail in Izmestiev and  Tabachnikov  \cite{Izmestiev}.
+
+\newpage
+% The case of  elliptic billiards is  developed   in detail in Izmestiev and  Tabachnikov  \cite{Izmestiev}.  \\ \\
+
+
+% Let an ellipse  $E$  be  the caustic.    $E$  has uniformizing  coordinate $ x,  dx =  \kappa^{2/3} ds,$   such that the billiard reflection in every confocal ellipse  $E$', containing E, %induces the map  $x \to  x +  \alpha $ (where the constant $\alpha$ depends on $E$'. \\
+ % It is indeed amazing the  universality of  (\ref{k}).
+ 
+\includegraphics[scale=0.3]{parameter_x.png}
+
+$$ $$
+
+Thus our  task is to compute along the caustic ellipse the space average 
+            \begin{equation} \label{task}       K(r) =   \frac{ 1}{\oint \,  \kappa^{2/3}  ds} \,  \, \oint \,   \cos(\theta)\,  \kappa^{2/3} ds  .
+            \end{equation}
+
+
+
+The result of the computation of (\ref{task}), in blue,  compared with the   direct simulation with 500 bounces  (in green) is depicted in the figure below.  The match
+is so perfect that one does not see the blue curve.  The behavior for small  $b_{cau}$   should be studied in more detail, as the average is still around 0.8 for  $b_{cau} =  0.01 $
+and should rise  to the value 1  for  $b_{cau} =  0$. \\ \\ \\   \\
+
+
+\includegraphics[scale=0.5]{comparison.jpg}
+
+\noindent Follows the relevant formulae for the calculation.  We adopt  the ``russian'' notation for the ellipses,  using  the squares of the axis values, so
+$$  E:\,\,\, \frac{x^2}{a} +  \frac{y^2}{b} = 1\,\,\, ,\,\,\,  E_{cau}:\,\,\,  \frac{x^2}{a_o} +  \frac{y^2}{b_o} = 1\,\,\, ,\,\,\,  a - a_o =  b - b_o = \lambda
+$$
+Some elementary geometry gives the relations between $r, \lambda $ and $b_{cau}$:
+\begin{equation}  b_{cau} = \sqrt{b_o}\,,\,\, b_o = b - \lambda,\,\,\,  r^2 =  \frac{\lambda}{ab} \,\,. 
+\end{equation}
+The caustic is parametrized by  
+$$  P_o:\,\,\,   x_o = \sqrt{a_o} \cos u\,,\, y_o = \sqrt{a_o} \sin u.
+$$ 
+The intersections with $E$ of the tangent line to the caustic  at $P_o$ are  the two points
+\begin{equation}   P_{\pm} :    \,\,\,   x_{1,2} = x_o -  \frac{y_o}{b_o} \,\, t^*_{\pm} \,\,,\,\, y_{1,2} = y_o +  \frac{x_o}{a_o} \,\, t^*_{\pm}
+\end{equation} 
+where
+\begin{equation} t^*_{\pm}  =  \frac{1}{A} \left(  B \pm  \sqrt{B^2 + AC}  \right)  
+\end{equation}
+with  $A, B, C $ given by     ($A, C > 0$)
+\begin{equation}    A = \frac{x_o^2}{b a_o^2} +  \frac{y_o^2}{a b_o^2}\,\,,\,\,  B = x_o y_o \, (\frac{1}{a b_o} -  \frac{1}{b a_o}  )\,\,,\,\,
+C = 1 -  \frac{x_o^2}{a} -  \frac{y_o^2}{b}  .
+\end{equation} 
+Using   the integral  (\ref{integral}) we get
+\begin{equation} 
+\cos \theta_{1,2} (u) =   2 r^2 \, \left( \frac{x_{1,2}^2}{a^2}  + \frac{y_{1,2}^2}{b^2}  \right)^{-1} \, -   1 \, ,
+\end{equation} 
+Finally the arc length and curvature along the caustic ellipse are given by
+$$ ds =  \left( a_o \, \sin^2 u + b_o \,  \cos^2 u       \right)^{1/2} du
+$$ 
+$$   \kappa = \sqrt{a_o b_o} \, \left( a_o \, \sin^2 u + b_o \,  \cos^2 u       \right)^{-3/2}
+$$ 
+so that
+\begin{equation}
+\rho = dx =  \kappa^{2/3}\, ds =   (a_o b_o)^{1/3} \, \left( a_o \, \sin^2 u + b_o \,  \cos^2 u       \right)^{-1/2}
+\end{equation}
+
+\begin{thebibliography}{99}
+
+\bibitem{Arnold}  V. Arnold, Mathematical Methods of Classical Mechanics, Springer Graduate Texts in Mathematics 60,  1978.
+
+\bibitem{Jovanovic}  %Bo\v{z}idar  
+B. Jovanovi\'c,  What are completely integrable Hamilton systems,  The Teachingg of Mathematics, v. 13:1,  1-14, 2011 (\url{http://elib.mi.sanu.ac.rs/files/journals/tm/26/tm1411.pdf}).
+
+\bibitem{Poritsky} H.  Poritsky,  The billiard ball problem on a table with a convex boundary -  an illustrative dynamical problem,  Ann. of Math. (2) 51 (1950), 446-470.
+
+
+\bibitem{Lazutkin} V. F. Lazutkin,The existence of caustics for a billiard problem in a convex domain, 	Izv. Akad. Nauk SSSR Ser. Mat., 1973,	v. 3:1,	 186-216.	 
+
+\bibitem{Glutsyuk}	A. Glutsyuk,  On curves with Poritsky property,  \url{https://arxiv.org/abs/1901.01881}
+
+
+
+\bibitem{Zhang}  J. Zhang, Suspension of the Billiard maps in the Lazutkin's coordinate, \url{ https://arxiv.org/abs/1610.00317}
+
+\bibitem{Izmestiev} I.Izmestiev,  S.Tabachnikov,  Ivorys theorem revisited,  
+Journal of Integrable Systems,  2:1, January 2017,  \url{https://doi.org/10.1093/integr/xyx006}
+ 
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
+
+\begin{center}
+{\Large {\bf    The function   $\cos \theta $  MUST REDO... }}
+\end{center}
+
+
+
+\noindent From basic analytic geometry:   the angle between lines of slopes $m_1, m_2$  is
+$$ \tan \theta  =  \pm \frac{ m_1 - m_2  } {1 + m_1 m_2 } \,\,\,\,  \Rightarrow \,\,\,\, 
+|\cos \theta| =      \frac{ | 1 + m_1 m_2 |  } {\sqrt{(1 + m_1^2)(1 + m_2^2)} }
+ $$
+It can be rewritten as
+\begin{equation}  \label{cos}
+| \cos \theta | =  \    \frac{ | 1 + m_1 m_2  | } {\sqrt{(1 - m_1m_2)^2 + (m_1 + m_2)^2} }
+\end{equation} 
+
+From  the sources below, given a point  $(x_o,y_o)$ outside an ellipse    $$x^2/a^2  + y^2/b^2  = 1 $$ the tangent lines  $ y = m x + d$  are determined by the system
+$$ y_o = m x_o + q \,\,\,  ,\,\,\,  a^2 m^2 + b^2 =  q^2  \,\,. 
+$$
+ It reduces to a quadratic equation.   There are two pairs of solutions
+$m_1, q_1$ and  $m_2, q_2 $. 
+Once they are computed, the two points of contact are given by   
+\begin{equation} ( -a^2 m_i/q_i \,,\, b_i^2/q_i  ) \, , \,\,\,\, i = 1,2.
+\end{equation}
+
+The equation for $m_1 , m_2 $ is
+$$  (a^2 - x_o^2) m^2 + 2 x_o y_o \, m + b^2 - y_o = 0
+$$
+so that
+\begin{equation}  \label{m}   m_1 + m_2 = - \frac{ 2 x_o y_o  }{ a^2 - x_o^2}\,\,,\,\, m_1 m_2  = \frac{b^2 - y_o^2  }{ a^2 - x_o^2}
+\end{equation}
+ \smallskip 
+
+\noindent Source:\\
+
+\noindent \url{http://www.nabla.hr/CS-ContentsA.htm}\\
+\url{http://www.nabla.hr/CS-EllipseAndLine1.htm}\\
+\url{http://www.nabla.hr/CS-EllipseAndLine2.htm}\\
+
+The desired expression  for  $\cos \theta (t)  $ results by inserting  (\ref{m}) into (\ref{cos})  with 
+%\centerline {  
+ $ (a \cos t \,,  b \sin t) $    inputs to   $ (x_o, y_o)$
+%  }
+and 
+%\centerline   { 
+$  a^2 - \lambda\,\,,\,\,  b^2 - \lambda  $  replacing    $  a,  b  $  in the above formulas.
+% }
+\bigskip
+
+\noindent  As we shown before,  $ \lambda = ab c $  where $c = (AX,  \hat{v} ) = c $   is the second integral of motion,  and where we take  the particle with unit velocity. \\ \\ 
+
+Now to set up  the integral  one needs to work  backwards, parametrizing the point of contact. 

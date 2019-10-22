@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}	
+\begin{document}
+
+\begin{center}
+{\bf {\large
+Proof that the sum of cosines is an integral}}
+\end{center}
+
+Sergei Tabachnikov has a proof (joint with Arseniy Akopian and Richard Schwartz) and kindly sent us the sketch.  The idea is to use the
+``meromorphic technique''.  We look forward for the details when their paper is ready.   Using  the Joachimsthal integral, recall that the cosine
+of an internal angle is, up to an additive constant and signs given by  $1/|Ax|^2$.  
+
+Follows Sergei's message:
+
+``The idea is to complexify and to analyze the poles of the sum of  $1/|Ax|^2 $ over the orbit as a function on the elliptic curve covering the conic.
+It turns out that the poles cancel each other, so one has a meromorphic function without poles, hence a constant.
+
+In fact, one can obtain [(n-1)/2] conserved quantities by considering star-shaped associated polygons that are also billiard orbits (in confocal ellipses). 
+In plain terms, these are sums of cosines of the sums of two consecutive angles, three consecutive angles, etc. of the polygon that is an n-periodic orbit. 
+The first time a new invariant shows up is when n=5.''
+
+In some more details:
+
+``We are given two conics,$ C_1$ and $C_2$, and we assume everything is over the field of complex numbers.
+The main character if the set of flags $E$ consisting of a point on $C_1$ and a line through this point tangent to $C_2$. This is an algebraic curve of genus 1, topologically, a torus.
+ On $E$, one has two involutions, the one that interchanges two points of $C_1$ on the same line and the one that swaps two lines through the same points of $C_1$. The composition is the Poncelet map of $E$, and it is a parallel translation of the torus.
+ 
+Now consider the function $F=\sum 1/|Ax|^2$. One can lift it from $C_1$ to $E$, and one wants to show that it is constant. For this, it suffices to show that it has no poles. So when does $(Ax,Ax)$ vanishes.   {\it One calculates} that these are four points of $C_1$, the tangency points of the four tangent lines that are shared by the family of confocal conics, in particular, $C_1$ and $C_2$ (in the real picture we do not  see these tangents).
+
+Now consider a fragment of a periodic orbit on E that involves one of these points:
+$$ \cdots (D,c)  \to  (C,b) \to  (B,a)  \to (A,a) \to (B,b)\to  (C,c) \cdots $$
+The dangerous point $B$ is visited twice, and the two (residues of the) poles cancel each other in the sum $  F$.'
+
+  \centering
+ \includegraphics[scale=0.3]{ellipses.pdf}
+ 
+ For some more information on the meromorphic technique, see  \cite{twohundred}. \cite{Cayley}, \cite{space}.
+ 
+ \begin{thebibliography}{99}
+ 
+\bibitem{twohundred}  Richard Schwartz andSergei Tabachnikov,  Centers of Mass of Poncelet Polygons, 200 Years After, Math Intelligencer (2016) 38:29-34.
+
+\bibitem{Cayley} Phillip Griffiths and Joseph Harris, In Cayley's explicit solution to Poncelet's porism,
+Colloquium on Topology and Algebra, Zurich, 1977.
+
+\bibitem{space}   Phillip Griffiths and Joseph Harris, 
+A Poncelet theorem in space,  Comment. Math. Helvetici 52 (1977) 145-160.
+
+
+
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}

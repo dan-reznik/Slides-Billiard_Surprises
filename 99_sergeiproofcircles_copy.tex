@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}	
+\begin{document}
+
+\begin{center}
+{\bf {\large
+Proof for the Stationary Circle  (Monge-Darboux?)}}
+\end{center}
+
+Sergei Tabachnikov gave us an elegant argument.  It not only proves that we have a circle but also gives its radius: \\
+
+\noindent  Observation xxx.   The radius of the Monge-Darboux circle  is the inverse
+of the Joachimsthal integral. \\ 
+
+Let the outer ellipse be given by $$ f(P)=1, \, f =  \frac{1}{2} (x^2/a^2 + y^2/b^2)\,,  P = (x,y) $$ and let the unit vector from $P$ to $Q$  two consecutive vertices be $v$ .  Recall that Joachimsthal integral of the billiard map
+can be cast as  $$(\nabla f(P),v)=c > 0, $$  where $v$ is the incoming vector.  We have therefore:\\
+\begin{enumerate}
+\item   $(\nabla f(P),v) = -(\nabla f(Q),v)$   (which is one half of the proof that it is an integral, and  in fact can be proved by a quick calculation).   Hence 
+$$ (\nabla f(P) + \nabla f(Q),v)=0.$$
+\item  The equation of the tangent line at point  $-Q$  (here is where the reflection is taken)  is ($\nabla f(Q),z)=-1$ , and that of the tangent line at point $P$ is $(\nabla f(P),z)=1$
+ (this is because $\nabla f(P)$ is a normal vector at $P$, and likewise at $Q$.) \\ \\
+Hence we have, for the intersection point $z$:  
+$$ (\nabla f(P)+ \nabla f(Q),z)=0. $$
+\end{enumerate}
+It follows that $z$ is proportional to $\hat{v}$.  See the figure just for a visual confirmation.
+Finally,  since $(\nabla f(P),v)=c$ and ($\nabla f(P),z)=1$, we have
+$$ z = v/c .$$
+That is, $z$ lies on the circle of radius $1/c$.\\
+
+
+%one now knows that z sweeps the red circle.
+\noindent  Remark.  The green line and  the green ellipse are not used in the proof.  They  illustrate a duality.
+Recall  the conceptual level, a quadratic form defines a linear isomorphism between a space and its dual space and, in dimension 2, 
+ provides an identification between points and lines, a projective duality.
+Thus, by definition, the dual line to point z connects the two tangency points of the tangent line to the  conic
+being considered. % from z.
+In other words, the line 
+$ L = L(z) $  passing through $ x$ and  $-y$ is, by definition, the dual of $ z $with respect to the outer blue ellipse.
+ (the billiard). %We are denoting the dependency  of   $x$ and $y$ on $z $ as x(z) and \pm y(z) and 
+ %L(z) the corresponding green line.
+ Consider the 1 parameter family of green lines $L = L(z)$ as z sweeps the circle. 
+ The caustic of this family is an ellipse, which lies intermediary between the blue ones. It is not  confocal to the blue ones. 
+% (one the one hand, I checked it numerically, and on the other, why should it be?)
+
+ 
+ $$ $$
+  \centering
+ \includegraphics[scale=0.2]{circle.png}
+
+\end{document}

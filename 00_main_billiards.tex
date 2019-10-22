@@ -1,0 +1,108 @@
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\usepackage{graphicx}
+%\usepackage{refcheck}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+%\usecolortheme[named=blue]{structure}
+\usefonttheme{professionalfonts}
+\usepackage{arev}
+
+\newtheorem{observation}{Observation}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{thms}{Theorems:}
+\usepackage{hyperref}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    %pdftitle={Promenade},    % title
+    %pdfauthor={Etienne Ghys},     % author
+    %pdfsubject={Subject},   % subject of the document
+    %pdfcreator={Creator},   % creator of the document
+    %pdfproducer={Producer}, % producer of the document
+   % pdfkeywords={keyword1, key2, key3}, % list of keywords
+    %pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=green,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=red           % color of external links
+}
+
+\title{Elliptic Billiard: Surprising New Properties}
+%\titlegraphic{%
+%  \begin{picture}(0,0)
+%    \put(50,175){\makebox(0,0)[rt]{\includegraphics[height=.33\textwidth]{pics/0000_friendly_ellipses.png}}}
+%  \end{picture}}
+
+\author[Reznik, Garcia, Koiller]{}
+\institute[]{\includegraphics[height=.33\textheight]{pics/0000_billiard_rack.png}
+%pics/0000_friendly_ellipses.png
+\\[10pt] D. Reznik -- Upper West Soluções \and
+R. Garcia -- Univ. Federal de Goiás \and 
+J. Koiller -- Univ. Federal de Juiz de Fora}
+
+\date{}
+
+
+\begin{document}
+
+\frame{\titlepage}
+    
+%\begin{frame}{Summary}
+%\tableofcontents
+%\end{frame}
+
+\section{Preliminaries}
+\frame{\sectionpage}
+\input{01_introduction}
+
+%\section{Preliminaries: Integrability and Conservation}
+%\frame{\sectionpage}
+%\input{01a_integrability}
+
+\section{Locus Pocus}
+\frame{\sectionpage}
+\input{02_elliptic}
+
+\section{A {\em Point} Locus!}
+\frame{\sectionpage}
+\input{03_mittenpunkt}
+
+%\section{A Circular Locus}
+%\frame{\sectionpage}
+%\input{05_circles}
+
+\section{The Beautiful Ratio}
+\frame{\sectionpage}
+\input{04_r_over_R}
+
+\section{Three Amazing Corollaries}
+\frame{\sectionpage}
+\input{04a_cosines}
+
+\section{Generalize $\forall{N}$}
+\frame{\sectionpage}
+\input{06_generalize}
+
+\section{Conclusion \& Questions}
+\input{08_conclusion}
+
+\end{document}
